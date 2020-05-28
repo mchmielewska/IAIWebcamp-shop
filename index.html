@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Armodo</title>
-    <script src="script.js" defer></script>
-    <link rel="stylesheet" href="resetstyles.css">
+    <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="./resetstyles.css">
     <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css"/>
+
 </head>
 <body>
     <!-- Navigation -->
@@ -17,34 +20,34 @@
         </div>
         <div class="container dg_bg info mobile_hide">
             <div class="col-3-lg info__item">
-                <img src="/assets/truck.svg" alt="truck">
+                <img src="./assets/truck.svg" alt="truck">
                 <span>darmowa dostawa</span>
             </div>
             <div class="col-3-lg info__item">
-                <img src="/assets/return.svg" alt="return">
+                <img src="./assets/return.svg" alt="return">
                 <span>30 dni na zwrot</span>
             </div>
             <div class="col-3-lg info__item">
-                <img src="/assets/sale.svg" alt="sale">
+                <img src="./assets/sale.svg" alt="sale">
                 <span>10% na pierwsze zakupy</span>
             </div>
         </div>
             <nav>
                 <div class="menu__container">
                     <div class="col-5 col-4-lg left">
-                        <img src="assets/armodo_logo.svg" alt="armodo logo">
+                        <img src="./assets/armodo_logo.svg" alt="armodo logo">
                     </div>
                     <div>
-                        <a href="#"><img src="/assets/search.svg"></a>
+                        <a href="#"><img src="./assets/search.svg"></a>
                     </div>
                     <div>
-                        <a href="#"><img src="/assets/heart.svg"></a>
+                        <a href="#"><img src="./assets/heart.svg"></a>
                     </div>
                     <div>
-                        <a href="#"><img src="/assets/bag.svg"></a>
+                        <a href="#"><img src="./assets/bag.svg"></a>
                     </div>
                     <div>
-                        <a href="#"><img src="/assets/icon_hamburger.svg"></a>
+                        <a href="#"><img src="./assets/icon_hamburger.svg"></a>
                     </div>
                 </div>
 
@@ -64,12 +67,37 @@
     </header>  
 
     <main>
-        <!-- Slider section -->
         <section id="slider">
-
+            <div id="large_slider" class="gray_bg">
+                <div class="col-12 large_slider__item">
+                    <a href="#">slide 1</a>
+                </div>
+                <div class="col-12 large_slider__item">
+                    <a href="#">slide 2</a>
+                </div>
+            </div>
+            <div class="container" id="companies_slider">
+                <div class="col-12 col-2-lg company_slider__item">
+                    <a href="#"><img src="./assets/nessi.svg"></a>
+                </div>
+                <div class="col-12 col-2-lg company_slider__item">
+                    <a href="#"><img src="./assets/tamaris.svg"></a>
+                </div>
+                <div class="col-12 col-2-lg company_slider__item">
+                    <a href="#"><img src="./assets/ginorossi.svg"></a>
+                </div>
+                <div class="col-12 col-2-lg company_slider__item">
+                    <a href="#"><img src="./assets/carinii.svg"></a>
+                </div>
+                <div class="col-12 col-2-lg company_slider__item">
+                    <a href="#"><img src="./assets/vagabond.svg"></a>
+                </div>
+                <div class="col-12 col-2-lg company_slider__item">
+                    <a href="#"><img src="./assets/karino.svg"></a>
+                </div>
+            </div>
         </section>
 
-        <!-- Banners section -->
         <section id="banner">
             <div class="container banner__container">
                 <div class="col-6 col-4-lg banner__item">
@@ -94,23 +122,44 @@
         </section>
 
         <section id="social">
+            <div class="col-12">
+                <h5>@armodo - sprawdź co nowego</h5>
+                <a href="#"><img src="assets/facebook_b.svg" alt="facebook logo" class="social"></a>
+                <a href="#"><img src="assets/instagram.svg" alt="instagram logo" class="social"></a>
+            </div>
+
+            <div id="social__slider">
+                <div class="social__slider_item col-9">
+                    <img src="./assets/social1.svg" alt="instagram post">
+                </div>
+                <div class="social__slider_item col-9">
+                    <img src="./assets/social2.svg" alt="instagram post">
+                </div>
+                <div class="social__slider_item col-9">
+                    <img src="./assets/social3.svg" alt="instagram post">
+                </div>
+                <div class="social__slider_item col-9">
+                    <img src="./assets/social4.svg" alt="instagram post">
+                </div>
+            </div>
+
                 <div class="col-12">
                     <h4>dlaczego warto kupować w armodo</h4>
                 </div>
-                <!-- <div class="container">
-                    <div class="col-3-lg social__item">
+                <div class="container">
+                    <div class="col-6 col-3-lg social__item">
                         <a href="#" title="korzysc">korzysc</a>
                     </div>
-                    <div class="col-3-lg social__item">
+                    <div class="col-6 col-3-lg social__item">
                         <a href="#" title="korzysc">korzysc</a>
                     </div>
-                    <div class="col-3-lg social__item">
+                    <div class="col-6 col-3-lg social__item">
                         <a href="#" title="korzysc">korzysc</a>
                     </div>
-                    <div class="col-3-lg social__item">
+                    <div class="col-6 col-3-lg social__item">
                         <a href="#" title="korzysc">korzysc</a>
                     </div>
-                </div> -->
+                </div>
                 <div class="container">
                     <div class="col-12 col-10-lg">
                         <p>
@@ -118,9 +167,7 @@
                         </p>
                     </div>
                 </div>
-            </div>
         </section>
-
     </main>
     
     <!-- Footer -->
@@ -185,23 +232,28 @@
             <div class="col-1-lg mobile_hide">
             </div>
             <div class="col-5-lg mobile_hide contact">
-                <img src="/assets/phone.svg" alt="phone"><span>+48 786818322</span>            
-                <img src="/assets/mail.svg" alt="e-mail"><span>info@armodo.com</span>
-                <img src="assets/facebook.svg" alt="facebook"><span>Odwiedź nas na Facebooku</span>
+                <img src="./assets/phone.svg" alt="phone"><span>+48 786818322</span>            
+                <img src="./assets/mail.svg" alt="e-mail"><span>info@armodo.com</span>
+                <img src="./assets/facebook.svg" alt="facebook"><span>Odwiedź nas na Facebooku</span>
             </div>
             <div class="col-1-lg mobile_hide">
             </div>
             <div class="col-12 col-5-lg">
-                <img src="/assets/logo.svg" alt="idoselllogo">
+                <img src="./assets/logo.svg" alt="idoselllogo">
             </div>
         </div>
         <div class="container gray_bg">
             <div class="col-7-lg mobile_hide">
-                <img src="/assets/shipping_logos.svg" alt="shipping companies">
+                <img src="./assets/shipping_logos.svg" alt="shipping companies">
             </div>
         </div>
 
     </footer>
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="./slick/slick.min.js"></script>
+    <script src="./slider.js"></script>
 
 </body>
 </html>

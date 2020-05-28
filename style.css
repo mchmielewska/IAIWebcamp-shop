@@ -42,9 +42,10 @@ img {
 .banner__item, .social__item {
     min-height: 30vh;
     margin-bottom: 30px;
+    font-size: 1.3rem;
 }
 
-.banner__item a, .social__item a {
+.banner__item a, .social__item a, .large_slider__item a {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -53,7 +54,6 @@ img {
     height: 100%;
     padding: 0.75rem;
     text-align: center;
-    font-size: 1.3rem;
     text-transform: uppercase;
     letter-spacing: 0.2em;
     text-decoration: none;
@@ -160,7 +160,6 @@ button {
 }
 
 #social .container {
-    padding: 1.5rem 0;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -174,11 +173,33 @@ button {
     padding: 2.5rem 0;
 }
 
-#social h4 {
+#social h4, #social h5 {
     font-size: 2rem;
-    margin-bottom: 1rem;
+    margin: 1rem 0;
+    padding-bottom: 1rem;
     letter-spacing: 0.2em;
     text-transform: uppercase;
+}
+
+.companies_slider img {
+    max-height: 60px;
+}
+
+#large_slider {
+    font-size: 2.5rem;
+    height: 50vh;
+    align-items: center;
+    align-content: center;
+    display: flex;
+    justify-content: center;
+}
+
+.social {
+    margin: 1rem 2rem;
+}
+
+.social__slider_item img {
+    max-width: 100%;
 }
 
 @media only screen and (min-width: 980px) {
@@ -254,5 +275,20 @@ button {
         padding-bottom: .3rem;
         display: inline-block;
         list-style: none;
+    }
+
+    .companies_slider {
+        width: 90vh;
+    }
+
+    #social__slider {
+        padding: 0 5%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    #social h4 {
+        font-size: 2rem;
     }
 }
