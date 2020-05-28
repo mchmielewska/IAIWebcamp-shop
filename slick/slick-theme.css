@@ -36,7 +36,7 @@
 
     cursor: pointer;
 
-    color: #FFFFFF;
+    color: #CFCFCF;
     border: none;
     outline: none;
     background: transparent;
@@ -71,7 +71,7 @@
     line-height: 1;
 
     opacity: 1;
-    color: #FFFFFF;
+    color: #CFCFCF;
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -80,7 +80,7 @@
 .slick-prev
 {
     z-index: 10;
-    left: 7%;
+    left: -15px;
 }
 [dir='rtl'] .slick-prev
 {
@@ -98,7 +98,7 @@
 
 .slick-next
 {
-    right: 7%;
+    right: -15px;
     z-index: 10;
 }
 [dir='rtl'] .slick-next
