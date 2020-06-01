@@ -1,0 +1,231 @@
+.product {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-flow: row;
+}
+
+#product_info {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    justify-content: space-between;
+    text-align: center;
+    align-content: center;
+}
+
+#product_slider {
+    order: 0;
+}
+
+#product_header {
+    order: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+#product_name {
+    order: 1;
+}
+
+#product_name h3 {
+    font-size: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    text-decoration: none;
+    margin-top: 1rem;
+    padding: 0.5rem;
+}
+
+#product_name h5 {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+#product_name h5 span {
+    display: none;
+}
+
+#product_grade {
+    order: 0;
+    display: flex;
+    flex-direction: row;
+    justify-self: center;
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+}
+
+#product_grade p {
+    padding: 1rem;
+}
+
+#product_grade span.promotion {
+    color: #FFFFFF;
+    background-color: #BB2000;
+    padding: 0.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+#product_grade img {
+    max-height: 50%;
+    margin: 0.5rem;
+}
+
+#slider_nav {
+    display: none;
+}
+
+#product_form {
+    background-color: #F9F9F9;
+}
+
+.navigation {
+    display: none;
+}
+
+#product_details {
+    font-size: 1.5rem;
+    text-align: left;
+    padding: 1.5rem;
+    line-height: 2.5rem;
+    background-color: #F9F9F9;
+}
+
+#additional_products {
+    padding: 0.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+
+@media only screen and (min-width: 980px) {
+    
+    .product {
+        max-width: 90vw;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 2fr), 1fr;
+        grid-auto-flow: row;
+    }
+        
+    #product_info {
+        grid-column: span 2;
+        grid-row: span 2;
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+        justify-content: space-between;
+        text-align: center;
+        align-content: center;
+    }
+
+    #product_slider {
+        order: 1;
+        display: flex;
+        flex-direction: row;
+        justify-self: center;
+        align-content: center;
+    }
+
+    #product_form {
+        grid-column: span 1;
+        grid-row: span 2;
+    }
+
+    #product_details {
+        grid-column: span 1;
+        grid-row: span 3;
+    }
+
+    #product_photos {
+        grid-column: span 2;
+        grid-row: span 2;
+        display: flex;
+        flex-direction: row;
+    }
+
+    #product_photos img {
+        max-width: 50%;
+    }
+
+    #additional_products {
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+
+    #slider_nav {
+        width: 11%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        align-content: center;
+    }
+
+    #slider_for {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-content: center;
+    }
+
+    #slider_for img {
+        display: inline-block;
+    }
+
+    #product_header {
+        order: 0;
+        flex-direction: column;
+    }
+
+    #product_header_grid {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    #product_grade {
+        flex-direction: column;
+        width: auto;
+        order: 1;
+    }
+
+    #product_name h5 span {
+        display: inline;
+    }
+
+    #product_name {
+        order: 0;
+    }
+
+    #product_grade span.promotion {
+        font-size: 1.8rem;
+        padding: 0.5rem 1rem;
+    }
+
+    #product_grade img {
+        max-height: 2rem;
+    }
+
+    .navigation {
+        display: block;
+        text-align: left;
+        letter-spacing: 0.1em;
+        font-size: 1.1rem;
+        padding: 1.5rem 0;
+    }
+
+    #additional_products {
+        text-align: left;
+        font-size: 2.5rem;
+    }
+}
