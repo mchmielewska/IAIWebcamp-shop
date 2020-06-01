@@ -19,6 +19,8 @@ if (mediaQ.matches) {
                     submenu.classList.add('hidden');
                 }
         })
+
+
 }
 } else {
     const mobileHiddenItems = document.getElementsByClassName('mobile_hide');
@@ -27,4 +29,37 @@ if (mediaQ.matches) {
     }
 };
 
+$(document).ready(function(){
+    if (window.matchMedia('(max-width: 480px)').matches) {
+    var zeynep = $('.zeynep').zeynep({
+        disableTransition: true,
+        onClosed: function () {
+          $("body main").attr("style", "");
+        },
+        onOpened: function () {
+          $("body main").attr("style", "pointer-events: none;");
+        }
+      });
 
+    $('.zeynep').zeynep({
+      onClosed: function () {
+        $("body main").attr("style", "");
+      },
+      onOpened: function () {
+        $("body main").attr("style", "pointer-events: none;");
+      }
+    });
+  
+    $(".zeynep-overlay").click(function () {
+      zeynep.close();
+    });
+  
+    $(".btn-open").click(function () {
+      if ($("html").hasClass("zeynep-opened")) {
+        zeynep.close();
+      } else {
+        zeynep.open();
+      }
+    });
+    }
+});

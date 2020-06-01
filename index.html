@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Armodo</title>
-    <script src="./script.js" defer></script>
+    
     <link rel="stylesheet" href="./resetstyles.css">
     <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="./slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css"/>
+    <link rel="stylesheet" href="./menu.css">
 
 </head>
 <body>
@@ -34,34 +35,240 @@
         </div>
             <nav>
                 <div class="menu__container">
-                    <div class="col-5 col-4-lg left">
+                    <div class="col-5 col-3-lg left">
                         <img src="./assets/armodo_logo.svg" alt="armodo logo">
                     </div>
-                    <div>
-                        <a href="#"><img src="./assets/search.svg"></a>
+                    <div class="col-3-lg mobile_hide">
+                        <form id="search__container">
+                            <input type="text" value="Wpisz czego szukasz" id="search" name="search">
+                            <input type="submit" id="search__button" value="">
+                        </form>
                     </div>
-                    <div>
-                        <a href="#"><img src="./assets/heart.svg"></a>
+                    <div class="col-3-lg col-7" id="icons__container">
+                        <div class="mobile_hide">
+                            <a href="#"><img alt="phone" src="./assets/phone_top.svg"></a>
+                        </div>
+                        <div class="mobile_hide">
+                            <a href="#"><img alt="account" src="./assets/group.svg"></a>
+                        </div>
+                        <div>
+                            <a href="#"><img alt="like" src="./assets/heart.svg"></a>
+                        </div>
+                        <div class="shopping">
+                            <div>
+                                <a href="#"><img src="./assets/bag.svg"></a>
+                                <span class="bag">12</span>
+                            </div>
+                                <div id="shopping_cart" class="mobile_hide">
+                                    <div class="uppercase"><a href="#">koszyk</a></div>
+                                    <div class="bold">225,00 zł</div>
+                                </div> 
+                            <div class="arrow mobile_hide"><a href="#"><img alt="go to shopping cart" src="./assets/arrow.svg"></a></div>
+                        </div>
+                        <div class="mobile_visible">
+                            <a href="#" class="btn-open"><img src="./assets/icon_hamburger.svg"></a>
+                        </div>
                     </div>
-                    <div>
-                        <a href="#"><img src="./assets/bag.svg"></a>
-                    </div>
-                    <div>
-                        <a href="#"><img src="./assets/icon_hamburger.svg"></a>
-                    </div>
-                </div>
+                    <div id="container_center">
+                        <div class="zeynep">
+                            <ul class="nav">
+                                <div class="dropdown">
+                                    <li class="has-submenu category">
+                                        <a href="#" data-submenu="damskie">Damskie</a>
+                                            <ul id="damskie" class="submenu dropdown-content">
+                                                <a class="category_name submenu-header uppercase" data-submenu-close="damskie">Damskie</a>
+                                                <li class="has-submenu">
+                                                    <a href="#" class="category_name" data-submenu="botki_kozaki">Botki i kozaki</a>
+                                                    <ul id="botki_kozaki" class="submenu">
+                                                    <a href="#" class="submenu-header uppercase" data-submenu-close="botki_kozaki">Botki i kozaki</a>
+                                                        <li><a href="#">Botki</a></li>
+                                                        <li><a href="#">Glany</a></li>
+                                                        <li><a href="#">Kowbojki</a></li>
+                                                        <li><a href="#">Kozaki</a></li>
+                                                        <li><a href="#">Muszkieterki</a></li>
+                                                        <li><a href="#">Oficerki</a></li>
+                                                        <li><a href="#">Śniegowce</a></li>
+                                                        <li><a href="#">Sztyblety</a></li>
+                                                        <li><a href="#">Trekkingi i trapery</a></li>
+                                                    </ul>
+                                                </li>
 
-                <div class="col-12-lg menu__list">
-                    <ul>
-                        <li><a href="#">Damskie</a></li>
-                        <li><a href="#">Męskie</a></li>
-                        <li><a href="#">Torebki</a></li> 
-                        <li><a href="#">Akcesoria</a></li>
-                        <li><a href="#">Premium</a></li>
-                        <li><a href="#">marki</a></li>
-                        <li><a href="#">nowości</a></li>
-                        <li><a href="#" class="sale">Wyprzedaż</a></li>
-                    </ul>
+                                                <li class="has-submenu">
+                                                    <a class="category_name" href="#" data-submenu="klapki_sandaly">Klapki i sandały</a>
+                                                    <ul id="klapki_sandaly" class="submenu">
+                                                    <a class="submenu-header uppercase" data-submenu-close="klapki_sandaly">Klapki i sandały</a>
+                                                        <li><a href="#">Klapki</a></li>
+                                                        <li><a href="#">Sandały</a></li>
+                                                    </ul>
+                                                </li>
+
+                                                <li class="has-submenu">
+                                                    <a href="#" class="category_name" data-submenu="polbuty">Półbuty</a>
+                                                    <ul id="polbuty" class="submenu">
+                                                        <a class="submenu-header uppercase" class="category_name" data-submenu-close="polbuty">Półbuty</a>
+                                                            <li><a href="#">Baleriny</a></li>
+                                                            <li><a href="#">Czółenka</a></li>
+                                                            <li><a href="#">Espadryle</a></li>
+                                                            <li><a href="#">Lordsy</a></li>
+                                                            <li><a href="#">Mokasyny</a></li>
+                                                            <li><a href="#">Na koturnie</a></li>
+                                                            <li><a href="#">Na obcasie</a></li>
+                                                            <li><a href="#">Oxfordy</a></li>
+                                                            <li><a href="#">Płaskie</a></li>
+                                                    </ul>
+                                                </li>
+                                                    <li class="has-submenu">
+                                                        <a class="category_name" href="#" data-submenu="d_marki">Marki</a>
+                                                        <ul id="d_marki" class="submenu">
+                                                            <a class="submenu-header uppercase" class="category_name" data-submenu-close="d_marki">Marki</a>
+                                                            <li><a href="#">Nessi</a></li>
+                                                            <li><a href="#">Tamaris</a></li>
+                                                            <li><a href="#">Gino rossi</a></li>
+                                                            <li><a href="#">Carinii</a></li>
+                                                            <li><a href="#">Karino</a></li>
+                                                            <li><a href="#">Nessi</a></li>
+                                                            <li><a href="#">Tamaris</a></li>
+                                                            <li><a href="#">Gino rossi</a></li>
+                                                            <li><a href="#">Carinii</a></li>
+                                                            <li><a href="#">Karino</a></li>
+                                                            <li class="underline"><a href="#">wszystkie marki</a></li>
+                                                        </ul>
+                                                    </li>
+                                                
+                                                <li class="submenu_adds">
+                                                    <ul>
+                                                        <li><a class="banner" href="#"><img src="./assets/banner.png" alt=""/><span >baner reklamowy</span></a></li>
+                                                    </ul>
+                                                    <ul class="adds_list">
+                                                        <li><a href="#">Nowości</a></li>
+                                                        <li><a href="#">Wyprzedaż</a></li>
+                                                        <li><a href="#">Bestsellery</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>                                                                              
+                                    </li>
+                                </div>
+                                <div class="dropdown">
+                                    <li class="has-submenu category">
+                                        <a href="#" data-submenu="meskie">Męskie</a>
+                                            <ul id="meskie" class="submenu dropdown-content">
+                                                <a class="category_name submenu-header uppercase" data-submenu-close="meskie">Męskie</a>
+                                                <li class="has-submenu">
+                                                    <a href="#" class="category_name" data-submenu="m_botki_kozaki">Botki i kozaki</a>
+                                                    <ul id="m_botki_kozaki" class="submenu">
+                                                    <a href="#" class="submenu-header uppercase" data-submenu-close="m_botki_kozaki">Botki i kozaki</a>
+                                                        <li><a href="#">Botki</a></li>
+                                                        <li><a href="#">Glany</a></li>
+                                                        <li><a href="#">Kowbojki</a></li>
+                                                        <li><a href="#">Kozaki</a></li>
+                                                        <li><a href="#">Muszkieterki</a></li>
+                                                        <li><a href="#">Oficerki</a></li>
+                                                        <li><a href="#">Śniegowce</a></li>
+                                                        <li><a href="#">Sztyblety</a></li>
+                                                        <li><a href="#">Trekkingi i trapery</a></li>
+                                                    </ul>
+                                                </li>
+
+                                                <li class="has-submenu">
+                                                    <a class="category_name" href="#" data-submenu="m_klapki_sandaly">Klapki i sandały</a>
+                                                    <ul id="m_klapki_sandaly" class="submenu">
+                                                    <a class="submenu-header uppercase" data-submenu-close="m_klapki_sandaly">Klapki i sandały</a>
+                                                        <li><a href="#">Klapki</a></li>
+                                                        <li><a href="#">Sandały</a></li>
+                                                    </ul>
+                                                </li>
+
+                                                <li class="has-submenu">
+                                                    <a href="#" class="category_name" data-submenu="m_polbuty">Półbuty</a>
+                                                    <ul id="m_polbuty" class="submenu">
+                                                        <a class="submenu-header uppercase" class="category_name" data-submenu-close="m_polbuty">Półbuty</a>
+                                                            <li><a href="#">Baleriny</a></li>
+                                                            <li><a href="#">Czółenka</a></li>
+                                                            <li><a href="#">Espadryle</a></li>
+                                                            <li><a href="#">Lordsy</a></li>
+                                                            <li><a href="#">Mokasyny</a></li>
+                                                            <li><a href="#">Na koturnie</a></li>
+                                                            <li><a href="#">Na obcasie</a></li>
+                                                            <li><a href="#">Oxfordy</a></li>
+                                                            <li><a href="#">Płaskie</a></li>
+                                                    </ul>
+                                                </li>
+                                                    <li class="has-submenu">
+                                                        <a class="category_name" href="#" data-submenu="m_marki">Marki</a>
+                                                        <ul id="m_marki" class="submenu">
+                                                            <a class="submenu-header uppercase" class="category_name" data-submenu-close="m_marki">Marki</a>
+                                                            <li><a href="#">Nessi</a></li>
+                                                            <li><a href="#">Tamaris</a></li>
+                                                            <li><a href="#">Gino rossi</a></li>
+                                                            <li><a href="#">Carinii</a></li>
+                                                            <li><a href="#">Karino</a></li>
+                                                            <li><a href="#">Nessi</a></li>
+                                                            <li><a href="#">Tamaris</a></li>
+                                                            <li><a href="#">Gino rossi</a></li>
+                                                            <li><a href="#">Carinii</a></li>
+                                                            <li><a href="#">Karino</a></li>
+                                                            <li class="underline"><a href="#">wszystkie marki</a></li>
+                                                        </ul>
+                                                    </li>
+                                                
+                                                    <li class="submenu_adds">
+                                                        <ul>
+                                                            <li><a class="banner" href="#"><img src="./assets/banner.png" alt=""/><span>baner reklamowy</span></a></li>
+                                                        </ul>
+                                                        <ul class="adds_list">
+                                                            <li><a href="#">Nowości</a></li>
+                                                            <li><a href="#">Wyprzedaż</a></li>
+                                                            <li><a href="#">Bestsellery</a></li>
+                                                        </ul>
+                                                    </li>
+                                            </ul>                                                                              
+                                    </li>
+                                </div>
+                                <div class="dropdown">
+                                    <li class="category">
+                                        <a href="#">Torebki</a>
+                                    </li>
+                                </div>
+                                <div class="dropdown">
+                                    <li class="category">
+                                        <a href="#">Akcesoria</a>
+                                    </li>
+                                </div>
+                                <div class="dropdown">
+                                    <li class="category">
+                                        <a href="#">Premium</a>
+                                    </li>
+                                </div>
+                                <div class="dropdown">
+                                    <li class="category">
+                                        <a href="#">Marki</a>
+                                    </li>
+                                </div>
+                                <div class="dropdown">
+                                    <li class="category">
+                                        <a href="#">Nowości</a>
+                                    </li>
+                                </div>
+                                <div class="dropdown">
+                                    <li class="category">
+                                        <a href="#" class="sale">Wyprzedaż</a>
+                                    </li>
+                                </div>
+                                    
+                                    <div class="mobile_visible">
+                                        <li><a href="#" class="additional_buttons"><img alt="account" src="./assets/group.svg"> Zaloguj się</a></li>
+                                        <li><a href="#" class="additional_buttons"><img alt="register" src="./assets/lock.png"> Zarejestruj się</a></li>
+                                        <li><a href="#" class="additional_buttons"><img alt="order" src="./assets/global.png"> Spawdź status zamówienia</a></li>
+                                        <li><a href="#" class="additional_buttons"><img alt="phone" src="./assets/phone.svg"> +48 786818322</a></li>         
+                                        <li><a href="#" class="additional_buttons"><img src="./assets/mail.svg" alt="e-mail"> info@armodo.com</a></li>
+                                        <li><a href="#" class="additional_buttons right_align">0,00 zł</a></li>
+                                    </div>
+                            </ul>
+                        
+                        </div>
+  
+                        <div class="zeynep-overlay"></div>
+                    </div>
                 </div>
             </nav>
     </header>  
@@ -186,7 +393,7 @@
                 </div>
             </div>
 
-                <div class="col-12">
+                <div class="col-12 social_fullwidth">
                     <h4>dlaczego warto kupować w armodo</h4>
                 </div>
                 <div class="container banner__container">
@@ -203,7 +410,7 @@
                         <a href="#" title="korzysc">korzysc</a>
                     </div>
                 </div>
-                <div class="container">
+                <div class="container social_fullwidth">
                     <div class="col-12 col-10-lg">
                         <p>
                         SEO Wygodne botki marki Carinii. Wierzchnią część butów tworzy Skóra naturalna - Zamsz. Botki posiadają obcas o wysokości 9,5 cm. Botki posiadają wyściółkę, to materiał, skóra. Wkładka to skóra. Trwała podeszwa to wysokogatunkowe tworzywo. Kobiecy fason, który sprawdzi się przy różnej pogodzie. Wygodne botki marki Carinii. Wierzchnią część butów tworzy Skóra naturalna - Zamsz. Botki posiadają obcas o wysokości 9,5 cm. Botki posiadają wyściółkę, to materiał, skóra. Wkładka to skóra. Trwała podeszwa to wysokogatunkowe tworzywo. Kobiecy fason, który sprawdzi się przy różnej pogodzie. Wygodne botki marki Carinii. Wierzchnią część butów tworzy Skóra naturalna - Zamsz. Botki posiadają obcas o wysokości 9,5 cm. Botki posiadają wyściółkę, to materiał, skóra. Wkładka to skóra. Trwała podeszwa to wysokogatunkowe tworzywo. Kobiecy fason, który sprawdzi się przy różnej pogodzie. Wygodne botki marki Carinii. 
@@ -271,7 +478,7 @@
             </div>
         </div>
 
-        <div class="container gray_bg">
+        <div class="container gray_bg mobile_hide">
             <div class="col-1-lg mobile_hide">
             </div>
             <div class="col-5-lg mobile_hide contact">
@@ -285,10 +492,14 @@
                 <img src="./assets/logo.svg" alt="idoselllogo">
             </div>
         </div>
-        <div class="container gray_bg">
-            <div class="col-7-lg mobile_hide">
+
+        <div class="container mobile_hide gray_bg">
+            <div class="col-7-lg">
                 <img src="./assets/shipping_logos.svg" alt="shipping companies">
             </div>
+        </div>
+        <div class="container gray_bg col-12 mobile_visible">
+            <img src="./assets/logo.svg" alt="idoselllogo">
         </div>
 
     </footer>
@@ -297,6 +508,7 @@
     <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="./slick/slick.min.js"></script>
     <script src="./slider.js"></script>
-
+    <script src="./node_modules/zeynepjs/dist/jquery.zeynep.js"></script>
+    <script src="./script.js"></script>
 </body>
 </html>

@@ -23,8 +23,8 @@ img {
 
 [class*="col-"] {
     width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
     text-align: center;
 }
   
@@ -42,8 +42,9 @@ img {
 .col-12 {max-width: 100%;}
 
 .banner__item, .social__item {
-    min-height: 30vh;
-    margin-bottom: 30px;
+    width: 45vw;
+    height: 45vw;
+    margin-bottom: 1rem;
     font-size: 1.3rem;
 }
 
@@ -156,6 +157,7 @@ header {
 }
 
 .menu__container {
+    z-index: 10;
     order: 0;
     background-color: #FFFFFF;
     display: flex;
@@ -180,16 +182,6 @@ header {
 
 #social h4, #social h5, #featured h5 {
     font-size: 2rem;
-    margin: 1rem 0;
-    padding-top: 1.5rem;
-    padding-bottom: 1rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-}
-
-#social h5 {
-    font-size: 2.5rem;
-    margin: 1rem 0;
     padding-top: 1.5rem;
     padding-bottom: 1rem;
     letter-spacing: 0.2em;
@@ -240,7 +232,7 @@ p.price {
     font-size: 2rem;
 }
 
-.sale, .menu__list a.sale {
+.sale, .dropdown li.category a.sale {
     color: #BB2000;
 }
 
@@ -253,7 +245,7 @@ span.sale {
 }
 
 .social {
-    margin: 1rem;
+    margin: 1rem 2rem;
 }
 
 .dg_bg a, .alert a {
@@ -261,27 +253,49 @@ span.sale {
     text-decoration: none;
 }
 
-.menu__list {
-    display: none;
-    width: 100%;
-    padding: 1.5rem 0;
-    margin-bottom: 1.5rem;
-    text-align: center;
-    align-content: center;
+.social_fullwidth {
+    padding: 0 2rem;
 }
 
-.menu__list a {
-    font-size: 1.8rem;
-    margin: 0 1.5rem;
-    padding: 0.75rem;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    text-decoration: none;
-    color: #000000;
+#icons__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.bag {
+    background-color: #FFFFFF;
+    position: relative;
+    left: -1.6rem;
+    top: 0.5rem;
+}
+
+.right_align {
+    text-align: right;
 }
 
 @media only screen and (min-width: 980px) {
+
+    [class*="col-"] {
+        width: 100%;
+        padding-right: 1rem;
+        padding-left: 1rem;
+        text-align: center;
+    }
+
+    .banner__item {
+        width: 30vw;
+        height: 30vw;
+        margin-bottom: 2rem;
+        font-size: 1.3rem;
+    }
+    
+    .social__item {
+        width: 22vw;
+        height: 22vw;
+        font-size: 1.3rem;
+    }
+
     .col-1-lg {max-width: 8.33%;}
     .col-2-lg {max-width: 16.66%;}
     .col-3-lg {max-width: 25%;}
@@ -301,7 +315,6 @@ span.sale {
 
     .banner__item a {
         font-size: 2.5rem;
-        min-height: 50vh;
     }
 
     .footer__ad h2 {
@@ -351,7 +364,7 @@ span.sale {
         text-align: left;
     }
 
-    .menu__list ul li {
+    .menu__list ul li.category {
         font-size: 1.3rem;
         padding-bottom: .3rem;
         display: inline-block;
@@ -376,4 +389,74 @@ span.sale {
         display: initial;
     }
 
+    .mobile_visible {
+        display: none;
+    }
+
+    #search {
+        display: inline-block;
+        width: 80%;
+        border: none;
+        margin-bottom: 0.5rem;
+    }
+
+    #search__button {
+        display: inline-block;
+        background-image: url(./assets/search.svg);
+        background-size: 1.5rem 1.5rem;
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-bottom: 0.5rem;
+        background-repeat: no-repeat;
+        background-color: #FFFFFF;
+        border: none;
+        cursor: pointer;
+    }
+
+    #search__container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        border: none;
+        border-bottom: 1px solid #707070;
+    }
+
+    #shopping_cart {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        padding: 0 1rem;
+    }
+
+    .shopping {
+        display: flex;
+        flex-direction: row;
+        text-align: left;
+        font-size: 1.3rem;
+        justify-content: center;
+    }
+
+    .uppercase {
+        text-transform: uppercase;
+    }
+
+    .bold {
+        font-weight: bold;
+        letter-spacing: 0.1em;
+    }
+
+    .arrow {
+        display: flex;
+        align-content: center;
+    }
+
+    .shopping a {
+        text-decoration: none;
+        color: #000000;
+    }
+
+    #icons__container {
+        justify-content: space-evenly;
+    }
+    
 }
