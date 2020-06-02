@@ -8,6 +8,15 @@ html {
     box-sizing: inherit;
 }
 
+.uppercase {
+    text-transform: uppercase;
+}
+
+.bold {
+    font-weight: bold;
+    letter-spacing: 0.1em;
+}
+
 img {
     max-width: 100%;
 }
@@ -434,15 +443,6 @@ span.sale {
         text-align: left;
         font-size: 1.3rem;
         justify-content: center;
-    }
-
-    .uppercase {
-        text-transform: uppercase;
-    }
-
-    .bold {
-        font-weight: bold;
-        letter-spacing: 0.1em;
     }
 
     .arrow {

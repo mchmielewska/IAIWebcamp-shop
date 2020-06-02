@@ -114,3 +114,13 @@
 .slick-arrow.slick-hidden {
     display: none;
 }
+
+#additional_slider.slick-initialized .slick-slide {
+    display: grid;
+}
+
+@media only screen and (max-width: 480px) {
+    #additional_slider .slick-slide img {
+        display: inline;
+    }
+}
