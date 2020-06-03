@@ -63,3 +63,37 @@ $(document).ready(function(){
     });
     }
 });
+
+
+const overlay = document.getElementById("overlay");
+const addToCart = document.getElementById("addToCart");
+const closeButton = document.getElementById("closeButton");
+const loader = document.getElementById('loader');
+const text = document.getElementById("text");
+
+function overlayOn() {
+  overlay.style.display = "block";
+}
+
+function overlayOff() {
+  overlay.style.display = "none";
+}
+
+addToCart.addEventListener('click', () => {
+
+  const cartSelect = document.getElementById("size");
+  const selection = cartSelect.selectedIndex;
+
+  if (selection === 0)
+  {
+    overlayOn();
+    closeButton.addEventListener('click', 
+    function () {
+      overlay.style.display = "none";
+    })
+  } else {
+    overlayOn();
+    text.classList.add("hidden");
+    loader.classList.remove('hidden');
+  }
+});

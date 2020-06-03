@@ -12,9 +12,16 @@
     <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css"/>
     <link rel="stylesheet" href="./menu.css">
     <link rel="stylesheet" href="./product_cart.css">
-
+    
 </head>
 <body>
+
+    <div id="overlay">
+        <button href="#" id="closeButton">x</button>
+        <div id="text">Proszę wybierz rozmiar jaki chciałbyś kupić</div>
+        <div id="loader" class="hidden"></div>
+    </div> 
+    
     <!-- Navigation -->
     <header>
         <div class="col-12 alert">
@@ -275,6 +282,7 @@
     </header>  
 
     <main>
+
         <div class="container">
             <div class="product">
                 <div class="empty"></div>
@@ -319,16 +327,17 @@
                         <p><span class="reduce">321,00 zł</span> Oszczędzasz 10% (22,56 zł)</p>
 
                         <p><img src="./assets/clock.svg"> Zamów dziś, wyślemy w czwartek 12.02</p>
-                        
+
                         <form>
-                            <select id="size" name="size">
+                            <select id="size" name="size" required>
+                                <option value="" selected>Wybierz rozmiar</option>
                                 <option value="36">Rozmiar 36 | Dostępne</option>
                                 <option value="37">Rozmiar 37 | Dostępne</option>
                                 <option value="38">Rozmiar 38 | Dostępne</option>
                                 <option value="39">Rozmiar 39 | Dostępne</option>
                               </select>
                               <p><img src="./assets/width.svg"><a href="#">Tabela rozmiarów</a></p>
-                              <input type="submit" value="Dodaj do koszyka"> <img src="./assets/heart.svg">
+                              <input id="addToCart" type="submit" value="Dodaj do koszyka"> <img src="./assets/heart.svg">
                         </form>
 
                         <p><img src="./assets/truck_mini.svg">Darmowa dostawa</p>

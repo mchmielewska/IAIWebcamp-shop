@@ -1,3 +1,56 @@
+#overlay {
+    position: fixed;
+    display: none;
+    width: 100%; 
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255,255,255,0.7); 
+    z-index: 1500; 
+    cursor: pointer; 
+  }
+
+#text{
+    position: absolute;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.2em;
+    top: 50%;
+    left: 50%;
+    font-size: 3rem;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+}
+
+#closeButton {
+    position: absolute;
+    cursor: pointer;
+    right: 0;
+}
+
+#loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 1.6rem solid white;
+    border-radius: 50%;
+    border-top: 1.6rem solid #BB2000;
+    width: 12rem;
+    height: 12rem;
+    animation: spin 60s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 .product {
     display: grid;
     grid-template-columns: 1fr;
@@ -201,6 +254,11 @@ form a {
     margin-bottom: 2rem;
     margin-top: 2rem;
     margin-right: 2rem;
+    transition: 0.3s;
+}
+
+.form_item input:hover {
+    background-color: #BB2000;
 }
 
 p.price_big {
@@ -253,6 +311,7 @@ p.mark {
     font-size: 1.3rem;
     margin: 1.5rem 0;
 }
+
 @media only screen and (min-width: 980px) {
     
     .product {
@@ -387,7 +446,13 @@ p.mark {
     }
 
     #slider_for img {
+        padding: 1rem;
         display: inline-block;
+        transition: all .4s ease-in-out;
+    }
+
+    #slider_for img:hover {
+        transform: scale(1.05);
     }
 
     #product_header {
