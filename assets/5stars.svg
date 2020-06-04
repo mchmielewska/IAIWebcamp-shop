@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="116.857" height="19" viewBox="0 0 116.857 19">
+  <g id="Group_86" data-name="Group 86" transform="translate(0 2)">
+    <path id="star" d="M6.635,10.441,8.685,14.6l4.585.666L9.953,18.5l.783,4.566-4.1-2.156-4.1,2.156L3.318,18.5,0,15.262,4.585,14.6Z" transform="translate(0 -9.645)"/>
+    <path id="star-2" data-name="star" d="M6.635,10.441,8.685,14.6l4.585.666L9.953,18.5l.783,4.566-4.1-2.156-4.1,2.156L3.318,18.5,0,15.262,4.585,14.6Z" transform="translate(18.524 -9.645)"/>
+    <path id="star-3" data-name="star" d="M6.635,10.441,8.685,14.6l4.585.666L9.953,18.5l.783,4.566-4.1-2.156-4.1,2.156L3.318,18.5,0,15.262,4.585,14.6Z" transform="translate(36.307 -9.645)"/>
+    <path id="star-4" data-name="star" d="M6.635,10.441,8.685,14.6l4.585.666L9.953,18.5l.783,4.566-4.1-2.156-4.1,2.156L3.318,18.5,0,15.262,4.585,14.6Z" transform="translate(54.09 -9.645)"/>
+    <path id="star-5" data-name="star" d="M6.635,10.441,8.685,14.6l4.585.666L9.953,18.5l.783,4.566-4.1-2.156-4.1,2.156L3.318,18.5,0,15.262,4.585,14.6Z" transform="translate(71.873 -9.645)"/>
+    <text id="_5_5" data-name="5/5" transform="translate(94.857 13)" fill="#0e1116" font-size="14" font-family="Roboto-Regular, Roboto"><tspan x="0" y="0">5/5</tspan></text>
+  </g>
+</svg>

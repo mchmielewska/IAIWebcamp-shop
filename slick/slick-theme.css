@@ -20,6 +20,10 @@
     width: 100%;
 }
 
+#grades_slider .slick-slide img {
+    display: inline;
+}
+
 /* Icons */
 @font-face
 {

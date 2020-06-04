@@ -156,4 +156,17 @@ $(document).ready(function(){
         ]
     });
 
+
+    $('#grades_slider').slick({
+        dots: false,
+        arrows: false,
+        vertical: true,
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 1500,
+        speed: 500,
+        slidesToShow: 2,
+        slidesToScroll: 1,
+    });
+
 });

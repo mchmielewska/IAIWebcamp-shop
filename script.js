@@ -79,7 +79,7 @@ function overlayOff() {
   overlay.style.display = "none";
 }
 
-addToCart.addEventListener('click', () => {
+addToCart.addEventListener('click', (e) => {
 
   const cartSelect = document.getElementById("size");
   const selection = cartSelect.selectedIndex;
@@ -92,8 +92,20 @@ addToCart.addEventListener('click', () => {
       overlay.style.display = "none";
     })
   } else {
+    e.preventDefault();
     overlayOn();
     text.classList.add("hidden");
     loader.classList.remove('hidden');
+    
+    closeButton.addEventListener('click', 
+    function () {
+      overlay.style.display = "none";
+    })
+
+    //overlay closing without any action
+    setTimeout(function () {
+      overlay.style.display = "none";
+    }, 3000);
   }
+
 });

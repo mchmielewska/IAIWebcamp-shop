@@ -39,7 +39,7 @@
     border-top: 1.6rem solid #BB2000;
     width: 12rem;
     height: 12rem;
-    animation: spin 60s linear infinite;
+    animation: spin 3s linear infinite;
 }
 
 @keyframes spin {
@@ -312,6 +312,99 @@ p.mark {
     margin: 1.5rem 0;
 }
 
+.social_fullwidth h4 {
+    font-size: 2rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}   
+
+.grade__item {
+    font-size: 1.3rem;
+    margin: 0;
+    text-align: left;
+    border-bottom: #CFCFCF solid 2px;
+    margin-bottom: 2.5rem;
+}
+
+.grade__item p {
+    margin-bottom: 1rem;
+}
+
+.grade__item .right {
+    text-align: right;
+}
+
+.gray_text {
+    color: #707070;
+}
+
+.grade {
+    margin-bottom: 2rem;
+}
+
+.grade__item p.right img {
+    margin: 0 0.5rem;
+}
+
+.add_grade {
+    font-size: 1.3rem;
+    margin: 0;
+    text-align: left;
+}
+
+.add_grade p {
+    margin: 1rem 0;
+}
+
+.graph {
+    max-width: 90vw;
+    margin: 2rem 0;
+    display: grid;
+    grid-template-columns: 1fr 10fr 1fr;
+    grid-gap: 1rem;
+    justify-content: center;
+    align-content: center;
+    align-self: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.graph_grade,.graph_count {
+    grid-column: span 1;
+}
+
+.graph .graph_container {
+    grid-column: span 1;
+    width: 100%;
+    height: 6px;
+    background-color: #E6E6E6;
+    border-radius: 10px;
+}
+  
+.grades {
+    margin: 0;
+    color: transparent;
+}
+  
+.grade_w {
+    height: 6px; 
+    border-radius: 10px;
+    background-color: #231F20;
+}
+.w-10 {width: 10%;} 
+.w-20 {width: 20%;}
+.w-30 {width: 30%;} 
+.w-40 {width: 40%;}
+.w-50 {width: 50%;} 
+.w-60 {width: 60%;}
+.w-70 {width: 70%;} 
+.w-80 {width: 80%;}
+.w-90 {width: 90%;} 
+.w-100 {width: 100%;}
+
 @media only screen and (min-width: 980px) {
     
     .product {
@@ -560,4 +653,9 @@ p.mark {
         min-width: 300px;
     }
     
+    .graph {
+        max-width: 80%;
+    }
+    
+
 }
