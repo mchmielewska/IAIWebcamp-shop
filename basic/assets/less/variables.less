@@ -1,0 +1,337 @@
+@info_color: @less_iaicolorscheme_info_color;
+@success_color: @less_iaicolorscheme_success_color;
+@danger_color: @less_iaicolorscheme_danger_color;
+@primary_color: @less_iaicolorscheme_primary_color;
+@gray_color: @less_iaicolorscheme_gray_color;
+@gray_lighter_color: @less_iaicolorscheme_gray_lighter_color;
+@gray_darker_color: @less_iaicolorscheme_gray_darker_color;
+@text_color: @less_iaicolorscheme_background_text_color;
+@link_color: @less_iaicolorscheme_background_link_color;
+@link_color_hover: @less_iaicolorscheme_background_link_color_hover;
+@warning_color: @less_iaicolorscheme_warning_color;
+@border_shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.05);
+@less_iaicolorscheme_background_color: #ffffff;
+@less_iaicolorscheme_background_link_color: #0090f6;
+@less_iaicolorscheme_background_link_color_hover: #000000;
+@less_iaicolorscheme_background_text_color: #333333;
+@less_iaicolorscheme_background_border_color: #c4c7c8;
+@less_iaicolorscheme_background_active_color: #0090f6;
+@less_iaicolorscheme_background_alternative_color: #f1f1f1;
+@less_iaicolorscheme_background_alternative_text_color: #333333;
+@less_iaicolorscheme_background_alternative_link_color: #0090f6;
+@less_iaicolorscheme_background_alternative_link_color_hover: #000000;
+@less_iaicolorscheme_background_alternative_border_color: #c4c7c8;
+@less_iaicolorscheme_background_alternative_active_color: #0090f6;
+@less_iaicolorscheme_background_mask_color: #ffffff;
+@less_iaicolorscheme_background_mask_text_color: #333333;
+@less_iaicolorscheme_background_mask_link_color: #0090f6;
+@less_iaicolorscheme_background_mask_link_color_hover: #000000;
+@less_iaicolorscheme_background_mask_border_color: #c4c7c8;
+@less_iaicolorscheme_background_mask_active_color: #0090f6;
+@less_iaicolorscheme_info_color: #0090f6;
+@less_iaicolorscheme_info_color_text: #ffffff;
+@less_iaicolorscheme_success_color_text: #ffffff;
+@less_iaicolorscheme_danger_color_text: #ffffff;
+@less_iaicolorscheme_warning_color_text: #ffffff;
+@less_iaicolorscheme_primary_color_text: #333333;
+@less_iaicolorscheme_success_color: #10ac82;
+@less_iaicolorscheme_danger_color: #e35c5c;
+@less_iaicolorscheme_warning_color: #f89406;
+@less_iaicolorscheme_primary_color: #0090f6;
+@less_iaicolorscheme_gray_color: #c4c7c8;
+@less_iaicolorscheme_gray_lighter_color: #f1f1f1;
+@less_iaicolorscheme_gray_darker_color: #333333;
+@less_iaicolorscheme_button_small_color: #0090f6;
+@less_iaicolorscheme_button_small_color_hover: #333333;
+@less_iaicolorscheme_button_small_text_color: #ffffff;
+@less_iaicolorscheme_button_small_text_color_hover: #ffffff;
+@less_iaicolorscheme_button_medium_color: #0090f6;
+@less_iaicolorscheme_button_medium_hover: #333333;
+@less_iaicolorscheme_button_medium_text_color: #ffffff;
+@less_iaicolorscheme_button_medium_text_hover: #ffffff;
+@less_iaicolorscheme_button_large_color: #0090f6;
+@less_iaicolorscheme_button_large_hover: #333333;
+@less_iaicolorscheme_button_large_text_color: #ffffff;
+@less_iaicolorscheme_button_large_text_hover: #ffffff;
+
+@tablet: ~"(min-width: 757px)";
+@laptop: ~"(min-width: 979px)";
+@desktop: ~"(min-width: 1200px)";
+
+.btn_small() {
+	font-size: 1.2rem;
+	padding: 0.9rem 1rem;
+	font-weight: normal;
+}
+
+.btn_small_button() {
+	padding: 0.95rem 1rem;
+}
+
+.btn_medium() {
+	font-size: 1.4rem;
+	padding: 1.25rem 1.4rem;
+}
+
+.btn_medium_button() {
+	padding: 1.35rem 1.4rem;
+}
+
+.btn_large() {
+	font-size: 1.6rem;
+	padding: 1.4rem 2rem;
+	font-weight: bold;
+}
+
+.btn_large_button() {
+	padding: 1.5rem 2rem;
+}
+
+.font() {
+	font-family: Arial;
+}
+
+.less_scrollbar(@color: @primary_color, @bg_color: @less_iaicolorscheme_background_alternative_color) {
+	scrollbar-color: @color @bg_color;
+	scrollbar-width: thin;
+
+	&::-webkit-scrollbar-track {
+		background-color: @bg_color;
+	}
+
+	&::-webkit-scrollbar {
+		width: 6px;
+		background-color: @bg_color;
+		height: 6px;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background-color: @color;
+	}
+}
+
+.less_labels {
+	border-left: 7px solid @less_iaicolorscheme_primary_color;
+	color: @less_iaicolorscheme_background_text_color;
+	display: block;
+	font-size: 1.29em;
+	font-weight: 600;
+	margin-bottom: 10px;
+	padding: 8px 0 7px 14px;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-align: left;
+}
+
+.less_hotspot_name {
+	text-decoration: none;
+	color: @text_color;
+}
+
+.less_hotspot_maxprice {
+	color: @gray_color;
+	text-decoration: line-through;
+	font-size: 0.86em;
+}
+
+.less_hotspot_price {
+	color: @text_color;
+	font-size: 1em;
+	font-weight: bold;
+}
+
+.less_hotspot_name_hover {
+	color: @link_color;
+}
+
+.less_tekst_maly {
+	font-weight: normal;
+}
+
+.less_tekst_duzy {
+	font-weight: normal;
+}
+
+.less_product_name {
+	color: @text_color;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.less_product_name_hover {
+	color: @link_color;
+}
+
+.less_map_loadingMap {
+	background: url('mapLoaderBg.png');
+	height: 501px;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 99;
+}
+
+.less_map_loadingContent {
+	position: relative;
+}
+
+.less_map_loadingBox {
+	background: #ffffff;
+	padding: 10px;
+	position: absolute;
+	opacity: 0;
+}
+
+.less_map_loadingMap_span {
+	color: @gray_darker_color;
+	display: block;
+	font-size: 11px;
+	margin-bottom: 5px;
+	text-align: center;
+}
+
+.less_map_loadingNav_span {
+	display: none;
+}
+
+.less_map_markerFace {
+	display: none;
+}
+
+.less_map_dymekWrapper {
+	overflow: hidden;
+	padding: 10px;
+	color: #333;
+}
+
+.less_map_dymekInfo {
+	float: left;
+	margin-right: 10px;
+}
+
+.less_map_dymekFirstName {
+	color: @less_iaicolorscheme_primary_color;
+	display: block;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+.less_map_dymekAddress {
+	clear: both;
+	display: block;
+}
+
+.less_map_dymekZipCode {
+	float: left;
+	padding-right: 3px;
+}
+
+.less_map_dymekCityName {
+	display: block;
+}
+
+.less_map_dymekCountryName {
+	clear: both;
+	display: block;
+}
+
+.less_background_active {
+	background-color: @less_iaicolorscheme_primary_color  !important;
+	color: #fff;
+}
+
+.less_payment_description_border {
+	border: 2px solid @less_iaicolorscheme_primary_color;
+}
+
+.less_small_label {
+	border-left: 7px solid @less_iaicolorscheme_primary_color;
+	color: @text_color;
+	display: block;
+	font-size: 1.29em;
+	font-weight: normal;
+	margin-bottom: 10px;
+	padding: 8px 0 7px 14px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.less_color-text {
+	color: @less_iaicolorscheme_primary_color;
+}
+
+.less_color-border {
+	border-color: @less_iaicolorscheme_primary_color;
+}
+
+.less_color-background {
+	background-color: @less_iaicolorscheme_primary_color;
+}
+
+.less_text_dark_color {
+	color: @text_color;
+	clear: both;
+}
+
+.less_text_dark_color_hover {
+	color: @less_iaicolorscheme_background_color;
+}
+
+.less_bg_alter {
+	background: @less_iaicolorscheme_background_alternative_color;
+	color: @less_iaicolorscheme_background_alternative_text_color;
+	border: 1px solid @less_iaicolorscheme_background_alternative_border_color;
+}
+
+.select_btn() {
+	border: 1px solid @less_iaicolorscheme_background_border_color;
+	background: @less_iaicolorscheme_background_mask_color;
+	box-shadow: @border_shadow;
+	color: @less_iaicolorscheme_background_mask_text_color;
+}
+
+.less_gray_wrapper() {
+	font-size: 0.9em;
+	background: @gray_lighter_color;
+	color: @text_color;
+	padding: 20px;
+}
+
+.load-btn(@color: @less_iaicolorscheme_button_medium_text_color) {
+	color: transparent;
+	position: relative;
+	pointer-events: none;
+
+	&:after {
+		content: '\F021';
+		font-family: FontAwesome;
+		font-size: 2rem;
+		color: @color;
+		width: 24px;
+		height: 24px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-top: -12px;
+		margin-left: -12px;
+		animation-name: rotate;
+		animation-duration: 1s;
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
+	}
+}
+
+.less_box(@border, @box-shadow) {
+	border: @border;
+	box-shadow: @box-shadow;
+}
+
+@keyframes rotate {
+	from {
+		transform: rotate(0deg);
+	}
+
+	to {
+		transform: rotate(359deg);
+	}
+}

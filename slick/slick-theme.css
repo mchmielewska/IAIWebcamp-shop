@@ -244,14 +244,14 @@
 {
     z-index: 5;
     left: 0;
-    rotate: 90deg;
+    transform: rotate(90deg);
 }
 
 #slider_nav  .slick-next
 {
     right: 0px;
     z-index: 5;
-    rotate: 90deg;
+    transform: rotate(90deg);
 }
 
 }

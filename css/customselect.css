@@ -1,0 +1,66 @@
+.jqcs_default_select{
+    display: none;
+}
+
+.jqcs_select{
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    background-color: #FFFFFF;
+    border: solid 1px #CFCFCF;
+    margin-top: 3rem;
+}
+
+.jqcs_select:hover{
+    background-color: #f9f9f9;
+}
+
+.jqcs_select .jqcs_value{
+    float: left;
+    padding: 5px;
+}
+
+.jqcs_select .jqcs_value p.jqcs_placeholder{
+    margin: 0;
+    padding: 1rem;
+}
+
+.jqcs_select .jqcs_arrow{
+    position: absolute;
+    height: 2.5rem;
+    right: 0;
+    height: 100%;
+    background-image: url(../assets/arrow-down.svg);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    transform: rotate(90deg);
+}
+
+.jqcs_select .jqcs_arrow.rotated{
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+    border-left: 0 !important; 
+}
+
+.jqcs_options{
+    width: 100%;
+    display: none; 
+    border: 1px #b1b1b1 solid; 
+    border-top: 0;
+}
+
+.jqcs_option{
+    cursor: pointer;
+    background-repeat: no-repeat;
+    height: 3rem;
+    margin-left: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+    padding-right: 1rem;
+}
+
+.jqcs_option:hover{
+    background-color: #FFFFFF;
+}

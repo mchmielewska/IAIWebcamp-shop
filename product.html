@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Armodo</title>
     
-    <link rel="stylesheet" href="./resetstyles.css">
+    <link rel="stylesheet" href="./css/resetstyles.css">
     <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css"/>
-    <link rel="stylesheet" href="./menu.css">
-    <link rel="stylesheet" href="./product_cart.css">
+    <link rel="stylesheet" href="./css/menu.css">
+    <link rel="stylesheet" href="./css/product_cart.css">
+    <link rel="stylesheet" href="./css/customselect.css" />
     
 </head>
 <body>
@@ -25,7 +26,7 @@
     <!-- Navigation -->
     <header>
         <div class="col-12 alert">
-            <a href="#">-20% na całą kolekcję zimową! ></a>
+            <a href="#">-20% na całą kolekcję <span style="white-space: nowrap;">zimową! ></span></a>
         </div>
         <div class="container dg_bg info mobile_hide">
             <div class="col-3-lg info__item">
@@ -46,17 +47,20 @@
                     <div class="col-5 col-3-lg left">
                         <img src="./assets/armodo_logo.svg" alt="armodo logo">
                     </div>
-                    <div class="col-3-lg mobile_hide">
+                    <div class="col-3-lg search mobile_hide">
                         <form id="search__container">
                             <input type="text" value="Wpisz czego szukasz" id="search" name="search">
                             <input type="submit" id="search__button" value="">
                         </form>
                     </div>
-                    <div class="col-3-lg col-7" id="icons__container">
+                    <div class="col-3-lg col-6" id="icons__container">
+                        <div class="mobile_visible">
+                            <a href="#"><img alt="search button" src="./assets/search.svg"></a>
+                        </div>
                         <div class="mobile_hide">
                             <a href="#"><img alt="phone" src="./assets/phone_top.svg"></a>
                         </div>
-                        <div class="mobile_hide">
+                        <div class="account">
                             <a href="#"><img alt="account" src="./assets/group.svg"></a>
                         </div>
                         <div>
@@ -65,11 +69,11 @@
                         <div class="shopping">
                             <div>
                                 <a href="#"><img src="./assets/bag.svg"></a>
-                                <span class="bag">12</span>
+                                <span id="bag" class="bag">0</span>
                             </div>
                                 <div id="shopping_cart" class="mobile_hide">
                                     <div class="uppercase"><a href="#">koszyk</a></div>
-                                    <div class="bold">225,00 zł</div>
+                                    <div class="bold"><span id="bagTotal">0,00</span> zł</div>
                                 </div> 
                             <div class="arrow mobile_hide"><a href="#"><img alt="go to shopping cart" src="./assets/arrow.svg"></a></div>
                         </div>
@@ -98,6 +102,7 @@
                                                         <li><a href="#">Śniegowce</a></li>
                                                         <li><a href="#">Sztyblety</a></li>
                                                         <li><a href="#">Trekkingi i trapery</a></li>
+                                                        <li class='mobile_visible'><a class="banner" href="#"><img src="./assets/banner.png" alt=""/><span >baner reklamowy</span></a></li>
                                                     </ul>
                                                 </li>
 
@@ -107,6 +112,7 @@
                                                     <a class="submenu-header uppercase" data-submenu-close="klapki_sandaly">Klapki i sandały</a>
                                                         <li><a href="#">Klapki</a></li>
                                                         <li><a href="#">Sandały</a></li>
+                                                        <li class='mobile_visible'><a class="banner" href="#"><img src="./assets/banner.png" alt=""/><span >baner reklamowy</span></a></li>
                                                     </ul>
                                                 </li>
 
@@ -123,6 +129,7 @@
                                                             <li><a href="#">Na obcasie</a></li>
                                                             <li><a href="#">Oxfordy</a></li>
                                                             <li><a href="#">Płaskie</a></li>
+                                                            <li class='mobile_visible'><a class="banner" href="#"><img src="./assets/banner.png" alt=""/><span >baner reklamowy</span></a></li>
                                                     </ul>
                                                 </li>
                                                     <li class="has-submenu">
@@ -140,6 +147,7 @@
                                                             <li><a href="#">Carinii</a></li>
                                                             <li><a href="#">Karino</a></li>
                                                             <li class="underline"><a href="#">wszystkie marki</a></li>
+                                                            <li class='mobile_visible'><a class="banner" href="#"><img src="./assets/banner.png" alt=""/><span >baner reklamowy</span></a></li>
                                                         </ul>
                                                     </li>
                                                 
@@ -149,7 +157,7 @@
                                                     </ul>
                                                     <ul class="adds_list">
                                                         <li><a href="#">Nowości</a></li>
-                                                        <li><a href="#">Wyprzedaż</a></li>
+                                                        <li><a href="#" class="sale">Wyprzedaż</a></li>
                                                         <li><a href="#">Bestsellery</a></li>
                                                     </ul>
                                                 </li>
@@ -174,6 +182,7 @@
                                                         <li><a href="#">Śniegowce</a></li>
                                                         <li><a href="#">Sztyblety</a></li>
                                                         <li><a href="#">Trekkingi i trapery</a></li>
+                                                        <li class='mobile_visible'><a class="banner" href="#"><img src="./assets/banner.png" alt=""/><span >baner reklamowy</span></a></li>
                                                     </ul>
                                                 </li>
 
@@ -183,6 +192,7 @@
                                                     <a class="submenu-header uppercase" data-submenu-close="m_klapki_sandaly">Klapki i sandały</a>
                                                         <li><a href="#">Klapki</a></li>
                                                         <li><a href="#">Sandały</a></li>
+                                                        <li class='mobile_visible'><a class="banner" href="#"><img src="./assets/banner.png" alt=""/><span >baner reklamowy</span></a></li>
                                                     </ul>
                                                 </li>
 
@@ -199,6 +209,7 @@
                                                             <li><a href="#">Na obcasie</a></li>
                                                             <li><a href="#">Oxfordy</a></li>
                                                             <li><a href="#">Płaskie</a></li>
+                                                            <li class='mobile_visible'><a class="banner" href="#"><img src="./assets/banner.png" alt=""/><span >baner reklamowy</span></a></li>
                                                     </ul>
                                                 </li>
                                                     <li class="has-submenu">
@@ -216,6 +227,7 @@
                                                             <li><a href="#">Carinii</a></li>
                                                             <li><a href="#">Karino</a></li>
                                                             <li class="underline"><a href="#">wszystkie marki</a></li>
+                                                            <li class='mobile_visible'><a class="banner" href="#"><img src="./assets/banner.png" alt=""/><span >baner reklamowy</span></a></li>
                                                         </ul>
                                                     </li>
                                                 
@@ -225,7 +237,7 @@
                                                         </ul>
                                                         <ul class="adds_list">
                                                             <li><a href="#">Nowości</a></li>
-                                                            <li><a href="#">Wyprzedaż</a></li>
+                                                            <li><a class="sale" href="#">Wyprzedaż</a></li>
                                                             <li><a href="#">Bestsellery</a></li>
                                                         </ul>
                                                     </li>
@@ -323,26 +335,20 @@
                     <div class="form_item gray_bg">
                         
                         <p class="mark"><img src="./assets/mark.svg"><br>Zobacz inne produkty</p>
-                        <p class="price_big">289,00 zł</p>
+                        <p class="price_big"><span id="price">289,00</span> zł</p>
                         <p><span class="reduce">321,00 zł</span> Oszczędzasz 10% (22,56 zł)</p>
 
                         <p><img src="./assets/clock.svg"> Zamów dziś, wyślemy w czwartek 12.02</p>
 
                         <form>
-                            <select id="size" name="size" required>
-                                <option value="" selected>Wybierz rozmiar</option>
-                                <option value="36">Rozmiar 36 | Dostępne</option>
-                                <option value="37">Rozmiar 37 | Dostępne</option>
-                                <option value="38">Rozmiar 38 | Dostępne</option>
-                                <option value="39">Rozmiar 39 | Dostępne</option>
-                              </select>
-                              <p><img src="./assets/width.svg"><a href="#">Tabela rozmiarów</a></p>
-                              <input id="addToCart" type="submit" value="Dodaj do koszyka"> <img src="./assets/heart.svg">
+                            <input name='select' type="hidden" id="sizeSelect" value='' />
+                            <p id='sizes'><img src="./assets/width.svg"><a href="#">Tabela rozmiarów</a></p>
+                            <input id="addToCart" type="submit" value="Dodaj do koszyka"> <a href="#"><img src="./assets/heart.svg"></a>
                         </form>
 
-                        <p><img src="./assets/truck_mini.svg">Darmowa dostawa</p>
-                        <p><img src="./assets/return_small.svg">30 dni na zwrot</p>
-                        <p><img src="./assets/phone_top.svg"> Zamów telefonicznie    |    +48 786818322</p>
+                        <p><a href="#"><img src="./assets/truck_mini.svg">Darmowa dostawa</a></p>
+                        <p><a href="#"><img src="./assets/return_small.svg">30 dni na zwrot</a></p>
+                        <p><a href="#"><img src="./assets/phone_top.svg"> Zamów telefonicznie    |    +48 786818322</a></p>
 
                     </div>
                     <div class="form_empty gray_bg">
@@ -352,11 +358,11 @@
                         <h5>dostępne kolory</h5>
                         <div class="colors">
                             <div class="color_item">
-                                <img src="./assets/small.png">
+                                <a href="#"><img src="./assets/small.png"></a>
                                 <p>Czarny</p>
                             </div>
                             <div class="color_item">
-                                <img src="./assets/small.png">
+                                <a href="#"><img src="./assets/small.png"></a>
                                 <p>Brązowy</p>
                             </div>
                         </div>
@@ -373,7 +379,7 @@
                         <div class="product_table">
                             <table>
                                 <tr>
-                                    <td>Producent</td><td>Karino</td>
+                                    <td>Producent</td><td><span class='red'>Karino</span></td>
                                 </tr>
                                 <tr>
                                     <td>Gwarancja</td><td>2 lata</td>
@@ -432,7 +438,7 @@
                                 <img src="./assets/add1.png">
                             </div>
                             <div class="align-bottom">
-                                Wkładki do butów<br><span class="hidden"> Lateks Aloe Vera</span>
+                                <a href="#">Wkładki do butów<br><span class="hidden"> Lateks Aloe Vera</span></a>
                             </div>
                             <div class="bold">
                                 8,50 zł
@@ -443,22 +449,23 @@
                                 <img src="./assets/add2.png">
                             </div>
                             <div class="align-bottom">
-                                ANTIACQUA - COCCINE<br><span class="hidden"> bezbarwny impregnat w sprayu</span>
+                                <a href="#">ANTIACQUA - COCCINE<br><span class="hidden"> bezbarwny impregnat w sprayu</span></a>
                             </div>
                             <div class="bold">
                                 8,50 zł
                             </div>
                         </div>
                         <div class="additional_slider__item">
-                            <div class="item_image">
-                                <img src="./assets/add1.png">
-                            </div>
-                            <div class="align-bottom">
-                                Wkładki do butów<br><span class="hidden"> Lateks Aloe Vera</span>
-                            </div>
-                            <div class="bold">
-                                8,50 zł
-                            </div>
+                            
+                                <div class="item_image">
+                                    <img src="./assets/add1.png">
+                                </div>
+                                <div class="align-bottom">
+                                    <a href="#">Wkładki do butów<br><span class="hidden"> Lateks Aloe Vera</span></a>
+                                </div>
+                                <div class="bold">
+                                    8,50 zł
+                                </div>
                         </div>
                     </div>
                     
@@ -473,34 +480,44 @@
 
             <div id="featured__slider" class="container featured__container">
                 <div class="featured__slider_item col-9">
-                    <img src="./assets/shoe1.png" alt="featured shoe">
-                    <h5>Botki KARINO</h5>
-                    <p>3019/076-f czarny</p>
-                    <p class="price">289,00 zł</p>
+                    <a href="#">
+                        <img src="./assets/shoe1.png" alt="featured shoe">
+                        <h5>Botki KARINO</h5>
+                        <p>3019/076-f czarny</p>
+                        <p class="price">289,00 zł</p>
+                    </a>
                 </div>
                 <div class="featured__slider_item col-9">
-                    <img src="./assets/shoe2.png" alt="featured shoe">
-                    <h5>Botki KARINO</h5>
-                    <p>3019/076-f czarny</p>
-                    <p class="price">289,00 zł</p>
+                    <a href="#">
+                        <img src="./assets/shoe2.png" alt="featured shoe">
+                        <h5>Botki KARINO</h5>
+                        <p>3019/076-f czarny</p>
+                        <p class="price">289,00 zł</p>
+                    </a>
                 </div>
                 <div class="featured__slider_item col-9">
-                    <img src="./assets/shoe3.png" alt="featured shoe">
-                    <h5>Botki KARINO</h5>
-                    <p>3019/076-f czarny</p>
-                    <p class="price sale">289,00 zł<span class="sale">289,00 zł</span></p>
+                    <a href="#">
+                        <img src="./assets/shoe3.png" alt="featured shoe">
+                        <h5>Botki KARINO</h5>
+                        <p>3019/076-f czarny</p>
+                        <p class="price sale">289,00 zł<span class="sale">289,00 zł</span></p>
+                    </a>
                 </div>
                 <div class="featured__slider_item col-9">
-                    <img src="./assets/shoe4.png" alt="featured shoe">
-                    <h5>Botki KARINO</h5>
-                    <p>3019/076-f czarny</p>
-                    <p class="price">289,00 zł</p>
+                    <a href="#">
+                        <img src="./assets/shoe4.png" alt="featured shoe">
+                        <h5>Botki KARINO</h5>
+                        <p>3019/076-f czarny</p>
+                        <p class="price">289,00 zł</p>
+                    </a>
                 </div>
                 <div class="featured__slider_item col-9">
-                    <img src="./assets/shoe2.png" alt="featured shoe">
-                    <h5>Botki KARINO</h5>
-                    <p>3019/076-f czarny</p>
-                    <p class="price">289,00 zł</p>
+                    <a href="#">
+                        <img src="./assets/shoe2.png" alt="featured shoe">
+                        <h5>Botki KARINO</h5>
+                        <p>3019/076-f czarny</p>
+                        <p class="price">289,00 zł</p>
+                    </a>
                 </div>
             </div>
         </section>
@@ -515,16 +532,16 @@
 
             <div id="social__slider" class="container">
                 <div class="social__slider_item col-9">
-                    <img src="./assets/social1.svg" alt="instagram post">
+                    <a href="#"><img src="./assets/social1.svg" alt="instagram post"></a>
                 </div>
                 <div class="social__slider_item col-9">
-                    <img src="./assets/social2.svg" alt="instagram post">
+                    <a href="#"><img src="./assets/social2.svg" alt="instagram post"></a>
                 </div>
                 <div class="social__slider_item col-9">
-                    <img src="./assets/social3.svg" alt="instagram post">
+                    <a href="#"><img src="./assets/social3.svg" alt="instagram post"></a>
                 </div>
                 <div class="social__slider_item col-9">
-                    <img src="./assets/social4.svg" alt="instagram post">
+                    <a href="#"><img src="./assets/social4.svg" alt="instagram post"></a>
                 </div>
             </div>
         </section>
@@ -598,28 +615,52 @@
                         <img class="grade" src="./assets/5stars.svg">
                         <p>Towar zgodny z opisem. Szybka wysyłka. Gorąco polecam.</p>
                         <p class="gray_text">Wera, Szczecin, Polska</p>
-                        <p class="right gray_text">Czy ta opinia była pomocna? <img src="./assets/thumbs-up-alt.svg"> Tak (3) <img src="./assets/thumbs-down.svg"> Nie (0)</p>
+                        <p class="right gray_text">
+                            Czy ta opinia była pomocna? 
+                            <img src="./assets/thumbs-up-alt.svg"> 
+                            <a href='#'>Tak (3)</a> 
+                            <img src="./assets/thumbs-down.svg"> 
+                            <a href='#'>Nie (0)</a>
+                        </p>
                     </div>
 
                     <div class="grade__item">
                         <img class="grade" src="./assets/5stars.svg">
                         <p>Wszystko w porządku, porządny opis, długa gwarancja utwierdziły mnie w podjęciu decyzji o zakupie tutaj. Polecam!</p>
                         <p class="gray_text">Bartłomiej, Opole, Polska</p>
-                        <p class="right gray_text">Czy ta opinia była pomocna? <img src="./assets/thumbs-up-alt.svg"> Tak (3) <img src="./assets/thumbs-down.svg"> Nie (0)</p>
+                        <p class="right gray_text">
+                            Czy ta opinia była pomocna? 
+                            <img src="./assets/thumbs-up-alt.svg"> 
+                            <a href='#'>Tak (3)</a> 
+                            <img src="./assets/thumbs-down.svg"> 
+                            <a href='#'>Nie (0)</a>
+                        </p>
                     </div>
 
                     <div class="grade__item">
                         <img class="grade" src="./assets/5stars.svg">
                         <p>Towar zgodny z opisem. Szybka wysyłka. Gorąco polecam.</p>
                         <p class="gray_text">Wera, Szczecin, Polska</p>
-                        <p class="right gray_text">Czy ta opinia była pomocna? <img src="./assets/thumbs-up-alt.svg"> Tak (3) <img src="./assets/thumbs-down.svg"> Nie (0)</p>
+                        <p class="right gray_text">
+                            Czy ta opinia była pomocna? 
+                            <img src="./assets/thumbs-up-alt.svg"> 
+                            <a href='#'>Tak (3)</a> 
+                            <img src="./assets/thumbs-down.svg"> 
+                            <a href='#'>Nie (0)</a>
+                        </p>
                     </div>
 
                     <div class="grade__item">
                         <img class="grade" src="./assets/5stars.svg">
                         <p>Wszystko w porządku, porządny opis, długa gwarancja utwierdziły mnie w podjęciu decyzji o zakupie tutaj. Polecam!</p>
                         <p class="gray_text">Bartłomiej, Opole, Polska</p>
-                        <p class="right gray_text">Czy ta opinia była pomocna? <img src="./assets/thumbs-up-alt.svg"> Tak (3) <img src="./assets/thumbs-down.svg"> Nie (0)</p>
+                        <p class="right gray_text">
+                            Czy ta opinia była pomocna? 
+                            <img src="./assets/thumbs-up-alt.svg"> 
+                            <a href='#'>Tak (3)</a> 
+                            <img src="./assets/thumbs-down.svg"> 
+                            <a href='#'>Nie (0)</a>
+                        </p>
                     </div>
 
                 </div>
@@ -668,7 +709,7 @@
     </main>
     
     <!-- Footer -->
-    <footer id="footer">
+    <footer>
         <div class="container gray_bg">
             <div class="col-12 footer__ad">
                 <h3>- 10% na pierwsze zakupy</h3>
@@ -725,28 +766,28 @@
             </div>
         </div>
 
-        <div class="container gray_bg mobile_hide">
+        <div class="container gray_bg">
             <div class="col-1-lg mobile_hide">
             </div>
             <div class="col-5-lg mobile_hide contact">
-                <img src="./assets/phone.svg" alt="phone"><span>+48 786818322</span>            
-                <img src="./assets/mail.svg" alt="e-mail"><span>info@armodo.com</span>
-                <img src="./assets/facebook.svg" alt="facebook"><span>Odwiedź nas na Facebooku</span>
+                <a href="#"><img src="./assets/phone.svg" alt="phone"><span>+48 786818322</span></a>            
+                <a href="#"><img src="./assets/mail.svg" alt="e-mail"><span>info@armodo.com</span></a>
+                <a href="#"><img src="./assets/facebook.svg" alt="facebook"><span>Odwiedź nas na Facebooku</span></a>
             </div>
             <div class="col-1-lg mobile_hide">
             </div>
-            <div class="col-12 col-5-lg">
-                <img src="./assets/logo.svg" alt="idoselllogo">
+            <div class="col-5-lg mobile_hide">
+                <a href="#"><img src="./assets/logo.svg" alt="idoselllogo"></a>
             </div>
         </div>
 
-        <div class="container mobile_hide gray_bg">
+        <div class="container gray_bg" id="shipping-companies">
             <div class="col-7-lg">
                 <img src="./assets/shipping_logos.svg" alt="shipping companies">
             </div>
         </div>
         <div class="container gray_bg col-12 mobile_visible">
-            <img src="./assets/logo.svg" alt="idoselllogo">
+            <a href="#"><img src="./assets/logo.svg" alt="idoselllogo"></a>
         </div>
 
     </footer>
@@ -754,8 +795,11 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="./slick/slick.min.js"></script>
-    <script src="./slider.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/slider.js"></script>
+    <script src="./js/customselect.js"></script>
+    <script src="./js/productcard.js"></script>
     <script src="./node_modules/zeynepjs/dist/jquery.zeynep.js"></script>
-    <script src="./script.js"></script>
+
 </body>
 </html>
