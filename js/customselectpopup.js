@@ -39,7 +39,7 @@
 		});
 		
 		$('#jqcs_o_'+options.identifier+' .jqcs_option').click(function(e){
-			$('input#sizeSelect')[0].value = $(this).data('select-value');
+			$('input#popupSelect')[0].value = $(this).data('select-value');
 			$($('#jqcs_s_'+options.identifier+' .jqcs_value')[0]).html(this.outerHTML);
 		});
 		
@@ -50,24 +50,5 @@
 	}
 })( jQuery );
 
-
-const sizeSelect = document.getElementById("sizeSelect");
-sizeSelect.value = '';
-	(function($){
-		$.customSelect({
-			identifier: 'select',
-			selector: '#sizeSelect',
-			value: '',
-			placeholder: 'Wybierz romiar',
-			options: [
-				['36', 'red.png', 'Rozmiar 36 | Niedostępne', 'notavailable'],
-				['37', 'green.png', 'Rozmiar 37 | Dostępne', 'available'],
-				['38', 'green.png', 'Rozmiar 38 | Dostępne', 'available'],
-				['39', 'red.png', 'Rozmiar 39 | Niedostępne', 'notavailable'],
-				['40', 'green.png', 'Rozmiar 40 | Dostępne', 'available'],
-				['41', 'red.png', 'Rozmiar 41 | Niedostępne', 'notavailable'],
-			],
-			template: "<div class='jqcs_option' data-select-value='$0 $3' style='background-image:url(../assets/$1);'>$2</div>"
-		});
-})(jQuery);
-
+const popupSelect = document.getElementById("popupSelect");
+popupSelect.value = '';

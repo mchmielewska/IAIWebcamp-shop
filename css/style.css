@@ -8,6 +8,51 @@ html {
     box-sizing: inherit;
 }
 
+#popup {
+    position: absolute;
+    background-color: white; 
+    z-index: 505; 
+    box-shadow: 1px 1px 20px 0px rgba(125,125,125,1);
+}
+
+#productCart {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+#quickOverlay {
+    position: fixed;
+    display: none;
+    width: 100%; 
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255,255,255,0.7); 
+    z-index: 500; 
+    cursor: pointer; 
+}
+
+#close {
+    position: absolute;
+    cursor: pointer;
+    right: 0;
+    background-color: transparent;
+    color: black;
+    font-size: 2.5rem;
+}
+
+.popup_product {
+    padding: 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+#popup_header {
+    margin-top: 5rem;
+}
 
 a {
     text-decoration: none;
@@ -300,6 +345,10 @@ span.sale {
     padding: 1.5rem;
 }
 
+#quickOverlay .other {
+    display: none;
+}
+
 @media only screen and (min-width: 980px) {
 
     [class*="col-"] {
@@ -510,5 +559,60 @@ span.sale {
 
     #social p {
         padding: 5rem 0;
+    }
+
+    #popup {
+        top: 10%;
+        padding: 3rem 0;
+    }
+    
+    .popup_product {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+
+    #popup_header {
+        padding: 2rem 0;
+    }
+
+    #popup_slider {
+        grid-column: span 1;
+        grid-column-start: 1;
+    }
+
+    #product_buy {
+        display: grid;
+    }
+
+    #product_popup_form {
+        grid-row-start: 1;
+        font-size: 1.3rem;
+        text-align: left;
+        padding: 1.5rem;
+        display: grid;
+        align-content: center;
+        grid-auto-flow: row;
+    }
+
+    #product_buy .other h5 {
+        font-size: 1.8rem;
+    }
+
+    #popup {
+        width: 70vw;
+    }
+
+    .popup_product {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        padding: 0;
+    }
+
+    #quickOverlay .other {
+        display: grid;
+    }
+    
+    #popup_header {
+        margin-top: 0;
     }
 }

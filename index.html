@@ -11,9 +11,82 @@
     <link rel="stylesheet" href="./slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css"/>
     <link rel="stylesheet" href="./css/menu.css">
+    <link rel="stylesheet" href="./css/product_cart.css">
+    <link rel="stylesheet" href="./css/customselect.css" />
 
 </head>
 <body>
+    <div id="overlay">
+        <button href="#" id="closeButton">x</button>
+        <div id="text">Proszę wybierz rozmiar jaki chciałbyś kupić</div>
+        <div id="loader" class="hidden"></div>
+    </div> 
+    
+    <div id="quickOverlay">
+        <div id="productCart">
+            <div id="loader" class="hidden"></div>
+            <div id="popup">
+                <button href="#" id="close">X</button>
+                <div class="popup_product">
+                    <div id="popup_header">
+                        <div id="product_header_grid">
+                            <div id="product_grade">
+                                <p><span class="promotion">promocja</span></p>
+                                <img src="./assets/grade.svg">
+                            </div>
+                            <div id="product_name">
+                                <h3 id="product_name_h3">Botki KARINO</h3>
+                                <h5 id="product_name_h5">3019/076-F czarny<span> - dłuższa nazwa produktu zajmująca więcej miejsca</span></h5>
+                            </div>
+                        </div>
+                    </div>
+                            
+                     <div id="popup_slider" class="">
+                            <div id="slider">
+                                <div><img id='slide1' src=""></div>
+                                <div><img id='slide2' src=""></div>
+                            </div>
+                        </div>
+                    
+                    <div id="product_buy">
+                        <div id="product_popup_form" class="gray_bg">
+                            
+                            <p class="price_big"><span id="price">289,00</span> zł</p>
+                            <!-- <p><span class="reduce">321,00 zł</span> Oszczędzasz 10% (22,56 zł)</p> -->
+    
+                            <p><img src="./assets/clock.svg"> Zamów dziś, wyślemy w czwartek 12.02</p>
+    
+                            <form>
+                                <input name='select' type="hidden" id="popupSelect" value='' />
+                                <p id='sizes'><img src="./assets/width.svg"><a href="#">Tabela rozmiarów</a></p>
+                                <input id="addToCart" type="submit" value="Dodaj do koszyka"> <a href="#"><img src="./assets/heart.svg"></a>
+                            </form>
+    
+                            <p><a href="#"><img src="./assets/truck_mini.svg">Darmowa dostawa</a></p>
+                            <p><a href="#"><img src="./assets/return_small.svg">30 dni na zwrot</a></p>
+                            <p><a href="#"><img src="./assets/phone_top.svg"> Zamów telefonicznie    |    +48 786818322</a></p>
+    
+                        </div>
+                        <div class="other">
+                            <h5>dostępne kolory</h5>
+                            <div class="colors">
+                                <div class="color_item">
+                                    <a href="#"><img src="./assets/small.png"></a>
+                                    <p>Czarny</p>
+                                </div>
+                                <div class="color_item">
+                                    <a href="#"><img src="./assets/small.png"></a>
+                                    <p>Brązowy</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                        
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Navigation -->
     <header>
         <div class="col-12 alert">
@@ -64,7 +137,7 @@
                             </div>
                                 <div id="shopping_cart" class="mobile_hide">
                                     <div class="uppercase"><a href="#">koszyk</a></div>
-                                    <div class="bold">0,00 zł</div>
+                                    <div class="bold"><span id="bagTotal">0,00</span> zł</div>
                                 </div> 
                             <div class="arrow mobile_hide"><a href="#"><img alt="go to shopping cart" src="./assets/arrow.svg"></a></div>
                         </div>
@@ -352,9 +425,10 @@
                     <a href="#">
                         <img src="./assets/shoe1.png" alt="featured shoe">
                         <h5>Botki KARINO</h5>
-                        <p>3019/076-f czarny</p>
+                        <p>3019/074-f czarny</p>
                         <p class="price">289,00 zł</p>
                     </a>
+                    <button id='k01' class="quickBuy">Dodaj do koszyka</button>
                 </div>
                 <div class="featured__slider_item col-9">
                     <a href="#">
@@ -363,30 +437,34 @@
                         <p>3019/076-f czarny</p>
                         <p class="price">289,00 zł</p>
                     </a>
+                    <button id='k02' class="quickBuy">Dodaj do koszyka</button>
                 </div>
                 <div class="featured__slider_item col-9">
                     <a href="#">
                         <img src="./assets/shoe3.png" alt="featured shoe">
                         <h5>Botki KARINO</h5>
-                        <p>3019/076-f czarny</p>
-                        <p class="price sale">289,00 zł<span class="sale">289,00 zł</span></p>
+                        <p>3012/076-f czarny</p>
+                        <p class="price sale">269,00 zł<span class="sale">289,00 zł</span></p>
                     </a>
+                    <button id='k03' class="quickBuy">Dodaj do koszyka</button>
                 </div>
                 <div class="featured__slider_item col-9">
                     <a href="#">
                         <img src="./assets/shoe4.png" alt="featured shoe">
                         <h5>Botki KARINO</h5>
-                        <p>3019/076-f czarny</p>
-                        <p class="price">289,00 zł</p>
+                        <p>3023/076-f czarny</p>
+                        <p class="price">189,00 zł</p>
                     </a>
+                    <button id='k04' class="quickBuy">Dodaj do koszyka</button>
                 </div>
                 <div class="featured__slider_item col-9">
                     <a href="#">
                         <img src="./assets/shoe2.png" alt="featured shoe">
                         <h5>Botki KARINO</h5>
-                        <p>3019/076-f czarny</p>
-                        <p class="price">289,00 zł</p>
+                        <p>3010/076-f czarny</p>
+                        <p class="price">299,00 zł</p>
                     </a>
+                    <button id='k05' class="quickBuy">Dodaj do koszyka</button>
                 </div>
             </div>
         </section>
@@ -531,5 +609,8 @@
     <script src="./js/slider.js"></script>
     <script src="./node_modules/zeynepjs/dist/jquery.zeynep.js"></script>
     <script src="./js/script.js"></script>
+    <script src="./js/productcard.js"></script>
+    <script src="./js/customselectpopup.js"></script>
+    <script src="./js/quickcart.js"></script>
 </body>
 </html>

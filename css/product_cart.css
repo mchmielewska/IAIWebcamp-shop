@@ -223,7 +223,7 @@ form a {
     color: #000000;
 }
 
-.form_item img {
+.form_item img, #product_popup_form img {
     margin-right: 1.5rem;
     display: inline-block;
 }
@@ -236,12 +236,17 @@ form a {
     flex-direction: column;
 }
 
-.form_item p {
+.form_item p, #product_popup_form p {
     font-size: 1.3rem;
     margin-bottom: 1.5rem;
 }
 
-.form_item input {
+.form_item p.jqcs_placeholder, #product_popup_form p.jqcs_placeholder {
+    font-size: 1.3rem;
+    margin-bottom: 0;
+}
+
+.form_item input, #product_popup_form input {
     background-color: #231F20;
     color: #FFFFFF;
     padding: 1.5rem;
@@ -256,11 +261,15 @@ form a {
     transition: 0.3s;
 }
 
-.form_item input:hover {
+#product_popup_form input {
+    margin-right: 0.5rem;
+}
+
+.form_item input:hover, #product_popup_form input:hover, .quickBuy:hover {
     background-color: #BB2000;
 }
 
-p.price_big {
+p.price_big, #product_popup_form p.price_big {
     font-size: 3rem;
     color: #BB2000;
     font-weight: bold;
@@ -303,7 +312,7 @@ p.price_big {
     margin: 1.5rem;
 }
 
-.form_item .mark {
+.form_item .mark, #product_popup_form .mark {
     display: none;
 }
 p.mark {
@@ -606,7 +615,7 @@ p.mark {
         display: none;
     }
     
-    .form_item p {
+    .form_item p, #product_popup_form p {
         font-size: 1.3rem;
         margin-bottom: 1.5rem;
     }
@@ -652,7 +661,7 @@ p.mark {
         margin: 1.5rem;
     }
 
-    .form_item .mark {
+    .form_item .mark, #product_popup_form .mark {
         display: inline;
     }
 
@@ -670,5 +679,9 @@ p.mark {
     
     .red {
         color:  #BB2000;
+    }
+
+    #product_popup_form input {
+        margin-right: 2rem;
     }
 }

@@ -169,4 +169,16 @@ $(document).ready(function(){
         slidesToScroll: 1,
     });
 
+
+    $('#slider').slick({
+        arrows: true,
+        dots: false,
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1
+      });
+
 });

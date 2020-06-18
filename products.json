@@ -1,0 +1,42 @@
+[
+        {
+            "id" : "k01",
+            "name" : "Botki KARINO",
+            "img" : "./assets/shoe1.png",
+            "long_name" : "3019/074-f czarny",
+            "price" : "289,00",
+            "available_sizes" : [36, 37, 39, 41]
+        },
+        {
+            "id" : "k02",
+            "name" : "Botki KARINO",
+            "img" : "./assets/shoe2.png",
+            "long_name" : "3019/076-f czarny",
+            "price" : "289,00",
+            "available_sizes" : [36, 38]
+        },
+        {
+            "id" : "k03",
+            "name" : "Botki KARINO",
+            "img" : "./assets/shoe3.png",
+            "long_name" : "3012/076-f czarny",
+            "price" : "269,00",
+            "available_sizes" : [36, 37, 40]
+        },
+        {
+            "id" : "k04",
+            "name" : "Botki KARINO",
+            "img" : "./assets/shoe4.png",
+            "long_name" : "3023/076-f czarny",
+            "price" : "189,00",
+            "available_sizes" : [38, 39, 40, 41]
+        },
+        {
+            "id" : "k05",
+            "name" : "Botki KARINO",
+            "img" : "./assets/shoe2.png",
+            "long_name" : "3010/076-f czarny",
+            "price" : "299,00",
+            "available_sizes" : [38, 39]
+        }
+    ]

@@ -25,11 +25,10 @@
     padding: 1rem;
 }
 
-.jqcs_select .jqcs_arrow{
+.jqcs_select .jqcs_arrow {
     position: absolute;
-    height: 2.5rem;
-    right: 0;
     height: 100%;
+    right: 0;
     background-image: url(../assets/arrow-down.svg);
     background-size: 50%;
     background-repeat: no-repeat;
