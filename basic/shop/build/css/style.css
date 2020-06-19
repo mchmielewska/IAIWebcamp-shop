@@ -11565,6 +11565,7 @@ input[type="checkbox"].css-checkbox + .css-label.chk::before {
   min-width: 55px;
   height: 55px;
   border: 1px solid #E5E5E5;
+  border-radius: 4px;
 }
 .hotspot.--list .product__icon img {
   max-height: 45px;
@@ -30898,7 +30899,7 @@ div.text_menu_sub li {
     z-index: 0;
     position: absolute;
     width: 150vw;
-    height: 50vh;
+    height: 52vh;
     left: -50%;
     background: #F5F5F5;
   }
@@ -30907,12 +30908,12 @@ div.text_menu_sub li {
   margin: 5rem 0;
   margin-top: 3rem;
   padding: 2rem;
-  width: 150% !important;
+  width: 100% !important;
   background: #F5F5F5;
 }
 @media (min-width: 757px) {
   #projector_longdescription {
-    padding: 7rem 10rem;
+    padding: 7rem;
     height: 45vh;
   }
 }

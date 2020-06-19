@@ -31,6 +31,8 @@
 }
 
 #loader {
+    padding: 0;
+    margin: 0;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -238,7 +240,7 @@ form a {
 
 .form_item p, #product_popup_form p {
     font-size: 1.3rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.8rem;
 }
 
 .form_item p.jqcs_placeholder, #product_popup_form p.jqcs_placeholder {
@@ -274,6 +276,10 @@ p.price_big, #product_popup_form p.price_big {
     color: #BB2000;
     font-weight: bold;
     margin-top: 3rem;
+}
+
+#product_popup_form p.price_big {
+    margin-top: 0.5rem;
 }
 
 .reduce {
@@ -683,5 +689,14 @@ p.mark {
 
     #product_popup_form input {
         margin-right: 2rem;
+    }
+
+    .form_item p, #product_popup_form p {
+        font-size: 1.3rem;
+        margin-bottom: 1.5rem;
+    }
+
+    #product_popup_form p.price_big {
+        margin-top: 3rem;
     }
 }

@@ -48,10 +48,15 @@ html {
     padding: 1.5rem;
     display: grid;
     grid-template-columns: 1fr;
+    max-width: 100%;
 }
 
-#popup_header {
-    margin-top: 5rem;
+#popup_slider {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    height: auto;
 }
 
 a {

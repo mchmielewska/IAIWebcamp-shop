@@ -9,7 +9,6 @@
     max-width: 80vw;
 }
 
-
 #featured__slider .slick-list, #featured__slider_two .slick-list {
     max-width: 100vw;
 }
@@ -17,8 +16,8 @@
 .slick-slider {
     display: flex;
     align-items: center;
-    width: 100%;
 }
+
 
 #grades_slider .slick-slide img {
     display: inline;
@@ -230,6 +229,9 @@
     max-width: 50vw;
 }
 
+#popup_slider__container .slick-list {
+    max-width: 30vw;
+}
 
 /* #slider_nav .slick-list {
     

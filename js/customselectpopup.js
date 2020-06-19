@@ -49,6 +49,3 @@
 		});
 	}
 })( jQuery );
-
-const popupSelect = document.getElementById("popupSelect");
-popupSelect.value = '';

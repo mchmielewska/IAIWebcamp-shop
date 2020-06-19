@@ -9,7 +9,8 @@ const product_name_h5 = document.getElementById('product_name_h5');
 const price_span = document.getElementById('price');
 const product_slide1 = document.getElementById('slide1');
 const product_slide2 = document.getElementById('slide2');
-console.log(product_slide1.src)
+
+const popup_slider__container = document.getElementById('popup_slider__container');
 
 popup.classList.add('hidden');
 
@@ -17,22 +18,31 @@ function quickOverlayOn() {
     quickOverlay.style.display = "block";
 }
 
-quickBuyElements.forEach(item => {
-    item.addEventListener('click', quickCart);
-});
-
 function quickCart (e) {
-    const productId = e.currentTarget.id;
+    const productId = e.currentTarget.id;     
+
+    let popupSelect = document.getElementById("popupSelect");  
+    closeOverlay.addEventListener('click', () => {
+        quickOverlay.style.display = "none";
+        let jqcs_s_select = document.getElementById('jqcs_s_select'); 
+        if (jqcs_s_select !== null) {
+            jqcs_s_select.remove();
+        }
+    })
+
     var xhr = new XMLHttpRequest();
     xhr.open('GET', '../products.json', true);
 
     xhr.onreadystatechange = function (e) {
         if (this.readyState !== 4) {
-            quickOverlayOn();
+            quickOverlayOn();   
             loader.classList.remove('hidden');
         }
 
         else if (this.readyState == 4 && this.status == 200){
+                  
+            popupSelect.value = '';
+
             loader.classList.add('hidden');
             popup.classList.remove('hidden');
 
@@ -58,7 +68,6 @@ function quickCart (e) {
 
                     product_slide1.src = productsArray[i].img;
                     product_slide2.src = productsArray[i].img;
-                    console.log(product_slide1.src)
 
                     const sizesArray = [];
 
@@ -67,7 +76,6 @@ function quickCart (e) {
                     }
 
                     (function($){
-                        
                         $.customSelect({
                             identifier: 'select',
                             selector: '#popupSelect',
@@ -78,18 +86,28 @@ function quickCart (e) {
                         });
                     })(jQuery);
 
-                    closeOverlay.addEventListener('click', () => {
-                        quickOverlay.style.display = "none"
-                    })
-                }
+                    $('#popup_slider__container').slick({
+                        arrows: true,
+                        dots: false,
+                        infinite: true,
+                        autoplay: true,
+                        autoplaySpeed: 3000,
+                        speed: 500,
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    });
+                }        
             }
+
+            
         }
+        
     }
-
-    
-
     xhr.send();
 }
 
+quickBuyElements.forEach(item => {
+    item.addEventListener('click', quickCart);
+});
 
 
